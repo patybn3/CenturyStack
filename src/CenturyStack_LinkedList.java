@@ -1,19 +1,20 @@
-
-import java.util.Collections;
 import java.util.LinkedList;
-
+//this code is virtually the same as the code in CenturyStack_ArrayList.java with the exception to the type of list used.
+//check CenturyStack_ArrayList.java comments
 public class CenturyStack_LinkedList implements CenturyStackInterface
 {
     protected LinkedList<Integer> stackArr;
 
     public CenturyStack_LinkedList()
     {
+        //linked lists cant take a max size
         stackArr = new LinkedList<>();
     }
 
     @Override
     public int push(int stackElements)
     {
+        //adding to the list
         stackArr.add(stackElements);
         return stackElements;
     }
@@ -22,7 +23,7 @@ public class CenturyStack_LinkedList implements CenturyStackInterface
     {
         for (int i = 0; i < ARRAYMAX; i++)
         {
-            push((int) (Math.random() * 100));
+            push((int) (Math.random() * 100)); //random numbers (100)
         }
         printList();
     }

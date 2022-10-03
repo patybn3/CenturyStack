@@ -5,7 +5,7 @@ public class CenturyStack_Implemented implements CenturyStackInterface
 {
     //ARRAYMAX is pre-set in CenturyStackInterface.java to be used by all implemented classes, cannot be changed
     protected int[] stackArr;
-    protected int indexTop = -1;
+    protected int indexTop = -1; //initial 'position'
 
     public CenturyStack_Implemented()
     {
@@ -15,13 +15,14 @@ public class CenturyStack_Implemented implements CenturyStackInterface
     @Override
     public int push(int stackElements)
     {
-        indexTop++;
-        stackArr[indexTop] = stackElements;
+        indexTop++; //increments every time its called
+        stackArr[indexTop] = stackElements; //to add the numbers to the array, its called in a loop
         return stackElements;
     }
 
     public void pushToArray()
     {
+        //calling push inside loop to add a random number to all 100 positions in the array
         for (int i = 0; i < stackArr.length; i++) {
             push((int) (Math.random() * 100));
         }
@@ -51,6 +52,7 @@ public class CenturyStack_Implemented implements CenturyStackInterface
 
     public void pushLast(int num)
     {
+        //replaces the last element with a random number passed in the main file
         for (int i = ARRAYMAX; i > 0; i--)
         {
             stackArr[stackArr.length - 1] = num;

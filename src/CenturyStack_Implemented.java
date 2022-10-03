@@ -29,7 +29,7 @@ public class CenturyStack_Implemented implements CenturyStackInterface
     }
 
     @Override
-    public int pop(int num)
+    public void pop()
     {
         //I believe there is no way this will catch an error, values are set, but I placed a try/catch just in case
         try
@@ -42,18 +42,21 @@ public class CenturyStack_Implemented implements CenturyStackInterface
             System.out.println("\nArray Without First Element:");
             printList();
             //replace last element to a number passed in the main method
-            for (int i = ARRAYMAX; i > 0; i--)
-            {
-                stackArr[stackArr.length - 1] = num;
-            }
-            System.out.println("\nArray With New Element Added:");
-            printList();
         }
         catch (ArrayIndexOutOfBoundsException e)
         {
             System.out.println("Array is full.");
         }
-        return 0;
+    }
+
+    public void pushLast(int num)
+    {
+        for (int i = ARRAYMAX; i > 0; i--)
+        {
+            stackArr[stackArr.length - 1] = num;
+        }
+        System.out.println("\nArray With New Element Added:");
+        printList();
     }
 
     public void printList()

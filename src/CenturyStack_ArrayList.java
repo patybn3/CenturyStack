@@ -26,15 +26,18 @@ public class CenturyStack_ArrayList implements CenturyStackInterface
     }
 
     @Override
-    public int pop(int num)
+    public void pop()
     {
         stackArr.remove(0);
         System.out.println("\nArrayList Without First Element:");
         printList();
+    }
+
+    public void pushLast(int num)
+    {
         push(num);
         System.out.println("\nArrayList With New Element Added:");
         printList();
-        return 0;
     }
 
     public void printList()

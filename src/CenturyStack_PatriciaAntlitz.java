@@ -1,5 +1,15 @@
 public class CenturyStack_PatriciaAntlitz
 {
+    public void printSeparationLine()
+    {
+        String[] myLine = new String[100];
+
+        for(int i = 0; i < myLine.length; i++)
+        {
+            System.out.print("_");
+        }
+        System.out.println();
+    }
     public static void main(String[] args)
     {
         int random;
@@ -12,11 +22,13 @@ public class CenturyStack_PatriciaAntlitz
         System.out.println("FIFO with Arrays:");
         runProgramArray.pushToArray();
         runProgramArray.pop(random);
+        mainLine.printSeparationLine();
         //ARRAYLIST
         System.out.println("\nFIFO with ArrayList:");
         runArrayList.pushToArray();
         runArrayList.pop(random);
-
+        mainLine.printSeparationLine();
+        //LINKED LIST
         System.out.println("\nFIFO with LinkedList:");
     }
 }

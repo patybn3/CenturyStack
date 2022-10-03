@@ -8,17 +8,12 @@ Class: CIS-252 Computer Science II - NECC Fall 2022
  * Please read the README file for detailed information about this program.
 
  * This file is the main class that runs this program
- * testDriverLimit object is created from the ArrayBoundedStack.java which implements an interface, StackInterface.java class
- * The following files are NOT original to this code (not coded by me):
-    * StackInterface.java
-    * StackUnderflowException.java
-    * StackOverflowException.java
- * The following file was partially coded by me (methods added): ArrayBoundedStack.java
- * This class is extends ArrayBoundedStack.java
- * It will take an user input as the size of the array
- * It will ask the user to enter the numbers to form the stack
- * In this program you can: Push to a stack (insert), pop from the top (remove), display the top element,
-    pop a given number of elements, print the stack, swap the top two element's positions, print the menu, print the stack size.
+ * 3 object are created from classes that implements an interface.
+ * This program does NOT take an user input.
+ * all values are generated randomly by the program
+ * It will generate the values through a loop, add them to an array or list, using the array[] property, the ArrayList and the LinkList
+ * Each one of those are preformed in its designated files.
+ * The first value entered on the list (index 0) is then removed, and a new item is inserted to the end of the list.
  */
 
 /**

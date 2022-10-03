@@ -5,5 +5,4 @@ public interface CenturyStackInterface
     int push(int stackElements);
 
     int pop(int num);
-
 }

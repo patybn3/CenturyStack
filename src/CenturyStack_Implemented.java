@@ -25,9 +25,7 @@ public class CenturyStack_Implemented implements CenturyStackInterface
         for (int i = 0; i < stackArr.length; i++) {
             push((int) (Math.random() * 100));
         }
-        System.out.println("First Element: " + stackArr[0]);
-        System.out.println("Last Element: " + stackArr[stackArr.length - 1] + "\n");
-        System.out.println(Arrays.toString(stackArr) + ", ");
+        printList();
     }
 
     @Override
@@ -41,19 +39,27 @@ public class CenturyStack_Implemented implements CenturyStackInterface
             {
                 stackArr[i] = stackArr[i + 1];
             }
+            System.out.println("\nArray Without First Element:");
+            printList();
             //replace last element to a number passed in the main method
             for (int i = ARRAYMAX; i > 0; i--)
             {
                 stackArr[stackArr.length - 1] = num;
             }
-            System.out.println("\nFirst Element: " + stackArr[0]);
-            System.out.println("Last Element: " + stackArr[stackArr.length - 1] + "\n");
-            System.out.println(Arrays.toString(stackArr) + ", ");
+            System.out.println("\nArray With New Element Added:");
+            printList();
         }
         catch (ArrayIndexOutOfBoundsException e)
         {
             System.out.println("Array is full.");
         }
         return 0;
+    }
+
+    public void printList()
+    {
+        System.out.println("\nFirst Element: " + stackArr[0]);
+        System.out.println("Last Element: " + stackArr[stackArr.length - 1]);
+        System.out.println(Arrays.toString(stackArr) + ", ");
     }
 }
